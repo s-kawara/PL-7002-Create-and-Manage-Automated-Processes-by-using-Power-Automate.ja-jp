@@ -1,33 +1,33 @@
 # PL-7002 Create and manage automated processes by using Power Automate
 
-- **Are you a MCT?** - Have a look at our [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/)
+- **あなたは MCTですか？** - [MCT向けの GitHub ユーザーガイド](https://microsoftlearning.github.io/MCT-User-Guide/) をご覧ください。
 
-## What are we doing?
+## 何を実現しますか？
 
-- To support this course, we will need to make frequent updates to the course content to keep it current with the Power Platform services used in the course.  We are publishing the lab instructions and lab files on GitHub to allow for open contributions between the course authors and MCTs to keep the content current with changes in the Power Platform.
+- このコースをサポートするには、コースで使用される Power Platform サービスでコースのコンテンツを最新の状態に保つために、コースのコンテンツを頻繁に更新する必要があります。Power Platform の変更に合わせてコンテンツを最新の状態に保つためにコース作成者と MCT の間でオープンに貢献できるように、ラボの手順とラボファイルを GitHub に公開しています。
 
-- We hope that this brings a sense of collaboration to the labs like we've never had before - when Power Platform changes and you find it first during a live delivery, go ahead and make an enhancement right in the lab source. Help your fellow MCTs.
+- これにより、ラボにこれまでにないコラボレーションを感覚が得られることを期待しています。Power Platform が変更され、ライブ配信中に最初にそれを見つけたら、ラボソースに直接機能拡張を行うことができます。他の MCT を助けて下さい。
 
-## How should I use these files relative to the released Microsoft Learn Instructor Led Training files?
+## リリースされた Microsoft Learn インストラクターラボトレーニングファイルと関連してこれらのファイルをどのように使用すれば良いですか？
 
-- The Trainer prep guide and PowerPoint slide decks are still going to be your primary source for teaching the course content.
+- トレーナー準備ガイドと PowerPoint スライド資料は、今後もコースの内容を教えるための主な情報源となります。
 
-- These files on GitHub are designed to be used in conjunction with the course and Learn modules, but are in GitHub as a central repository so MCTs and course authors can have a shared source for the latest lab, demo, and exercise files.
+- GitHub 上のこれらのファイルは、コース及び学習モジュールと組み合わせて使用するように設計されていますが、中央リポジトリとして GitHub に存在するため、MCT とコース作成者は最新のラボ、デモ、演習ファイルの共有ソースを入手できます。
 
-- It will be recommended that for every delivery, trainers check GitHub for any changes that may have been made to support the latest Power Platform services, and get the latest files for their delivery.
+- 配信の度に、トレーナーは、最新の Power Platform サービスをサポートするうために加えられた変更がないか GitHub を確認し、配信用の最新ファイルを取得することが推奨されます。
 
-## What about changes to the course contents?
+## コース内容の変更については、どうなりますか？
 
-- Course content is on Microsoft Learn and may be updated outside of the course release schedule.
+- コースのコンテンツは、Microsoft Learn にあり、コースのリソーススケジュール外に更新される場合があります。
 
-## How do I contribute?
+## どのように貢献すればいいですか？
 
-- Any MCT can submit a pull request to the code or content in the GitHub repro, Microsoft and the course author will triage and include content and lab code changes as needed.
+- どの MCT も、GitHub 再現内のコードまたはコンテンツに対するプルリクエストを送信できます。Microsoft とコース作成者は、必要に応じてコンテンツとラボコードの変更を優先順位付けして含められます。
 
-- You can submit bugs, changes, improvement and ideas. Find a new feature before we have? Submit a new demo!
+- バグ、変更、改善、アイデアを送信できます。新しい機能を見つける前に見つけましたか？新しいデモを提出してください！
 
-## Notes
+## メモ
 
-### Classroom Materials
+### コース資料
 
-It is strongly recommended that MCTs and Partners access these materials and in turn, provide them separately to students. Pointing students directly to GitHub to access Lab steps as part of an ongoing class will require them to access yet another UI as part of the course, contributing to a confusing experience for the student. An explanation to the student regarding why they are receiving separate Lab instructions can highlight the nature of an always-changing cloud-based interface and platform. Microsoft Learning support for accessing files on GitHub and support for navigation of the GitHub site is limited to MCTs teaching this course only.
+MCT とパートナーが、これらの資料にアクセスし、学生に個別に提供することを強く推奨します。 進行中のクラスの一部としてラボ ステップにアクセスできるように、学生に直接 GitHub を指示するには、学生がコースの一部として別の UI にもアクセスする必要がありますが、これは混乱の原因となります。 個別のラボの手順を受け取る理由を学生に説明すると、クラウドベースのインターフェイスとプラットフォームが常に変化しているという性質を強調できます。 GitHub 上のファイルにアクセスするための Microsoft Learning サポートと GitHub サイトのナビゲーションのサポートは、このコースを教える MCT のみに限定されています。
