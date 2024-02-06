@@ -1,45 +1,45 @@
 ---
 lab:
-    title: 'Lab 0: Validate lab environment'
-    module: 'Module 0: Course Introduction'
+    title: 'ラボ 0: ラボ環境を検証する'
+    module: 'モジュール 0: コースの紹介'
 ---
 
-# Practice Lab 0 - Validate lab environment
+# 演習 0 - ラボ環境を検証する
 
-> **IMPORTANT:** This lab provides you with a Microsoft 365 tenant and licenses for the Power Platform applications you will be using in this course. You will only be provided with one tenant for the practice labs in this course. The settings and actions you take within this tenant do not roll-back or reset, whereas the virtual machine you are provided with does reset each time you close the lab session. Please be aware that Microsoft 365 and Power Platform are evolving all the time. The instructions in this document may be different from what you experience in your actual tenant. It is also possible to experience a delay of several minutes before the virtual machine has network connectivity to begin the labs.
+> **重要:** このラボでは、このコースで使用する Power Platform アプリケーションの Microsoft 365 テナントとライセンスを提供します。 このコースの演習ラボにはテナントが 1 つだけ提供されます。 このテナント内で実行する設定とアクションはロールバックまたはリセットされませんが、提供される仮想マシンはラボ セッションを閉じるたびにリセットされます。 Microsoft 365 と Power Platform は常に進化していることに注意してください。 このドキュメントの手順は、実際のテナントで経験するものとは異なる場合があります。 また、仮想マシンがネットワークに接続されてラボを開始するまでに数分の遅延が発生する可能性があります。
 
-## WWL Tenants - Terms of Use
+## WWL テナント - 利用規約
 
-If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
+インストラクター主導のトレーニング実施の一部としてテナントが提供されている場合、テナントはインストラクター主導のトレーニングのハンズオン ラボをサポートする目的で利用可能であることに注意してください。
 
-Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension.
+テナントを共有したり、ハンズオン ラボ以外の目的で使用したりしないでください。 本コースで利用するテナントはトライアルテナントのため、授業終了後は利用・アクセスできず、延長の対象外となります。
 
-Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
+テナントを有料サブスクリプションに変更してはなりません。 このコースの一環として取得したテナントは引き続き Microsoft Corporation の所有物であり、当社はいつでもアクセス権を取得し、再所有する権利を留保します。
 
-## Exercise 1 – Access Microsoft Power Platform
+## 演習 1 – Microsoft Power Platform にアクセスする
 
-In this exercise, you will verify that you can access Power Apps.
+この演習では、Power Apps にアクセスできることを確認します。
 
-### Task 1.1 – Sign in to Power Apps
+### タスク 1.1 – Power Apps にサインインする
 
-1. Verify that you have your **Microsoft 365 credentials** from the Authorized Lab Host available. The credentials will be in the **Resources** tab.
+1. 認定ラボ ホストから **Microsoft 365 credentials** が利用可能であることを確認します。認証情報は **Resources** タブにあります。
 
-1. In a new browser tab, navigate to `https://powerapps.microsoft.com`
+1. 新しいブラウザー タブで、 `https://powerapps.microsoft.com` に移動します。
 
-1. Select **Sign in**.
+1. **Sign in** を選択します。
 
-1. Enter the `email address` provided by the Authorized Lab Host.
+1. 認定ラボ ホストから提供された `email address` を入力します。
 
-1. Select **Next**.
+1. **Next** を選択します。
 
-1. Enter the `password` provided by the Authorized Lab Host.
+1. 認定ラボ ホストから提供された `password` を入力します。
 
-1. Select **Sign in**.
+1. **Sign in** を選択します。
 
-1. Optionally, select **Yes** to stay signed in.
+1. 必要に応じて、 **Yes** を選択してサインインしたままにします。
 
-1. If prompted for contact information, leave the Country/region as the default value and enter `0123456789` for Phone number and select **Submit**.
+1. 連絡先情報の入力を求められたら、国/地域をデフォルト値のままにし、電話番号に `0123456789` を入力し、 **Submit** を選択します。
 
-1. At the top right of the screen, verify that the **Environment** is set to **Dev One**. This is where you will be working for the entirety of this lab. If it is not, select the **Dev One** environment.
+1. 画面の右上で、 **Environment** が **Dev One** に設定されていることを確認します。ここは、このラボ全体を通して作業する場所です。そうでない場合は、 **Dev One** 環境を選択します。
 
     ![Environment selector.](../media/select-dev-one-environment.png)
