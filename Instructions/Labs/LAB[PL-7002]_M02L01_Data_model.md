@@ -1,184 +1,184 @@
 ---
 lab:
-    title: 'Lab 2: Data model'
-    module: 'Module 2: Get started with Microsoft Dataverse'
+    title: 'ラボ 2: データ モデル'
+    module: 'モジュール 2: Microsoft Dataverse の使用を開始する'
 ---
 
-# Practice Lab 2 – Data model
+# 演習 2 – データ モデル
 
-In this lab you will create Dataverse tables and columns.
+このラボでは、Dataverse のテーブルと列を作成します。
 
-## What you will learn
+## 学習する内容
 
-- How to create tables and columns in Microsoft Dataverse
-- How to create a relationship with a lookup column
+- Microsoft Dataverse でテーブルと列を作成する方法
+- ルックアップ列との関係を作成する方法
 
-## High-level lab steps
+## ハイレベルラボの手順
 
-- Create a custom table
-- Add columns to the table
-- Create relationship to the by using a lookup column
+- カスタムテーブルを作成する
+- テーブルに列を追加する
+- ルックアップ列を使用して との関係を作成する
   
-## Prerequisites
+## 前提条件
 
-- Must have completed **Lab 0: Validate lab environment**
+- **ラボ 0: ラボ環境の検証** を完了している必要があります
 
-## Detailed steps
+## 詳細な手順
 
-## Exercise 1 – Create custom tables
+## 演習 1 – カスタム テーブルを作成する
 
-### Task 1.1 - Create the Opportunity table
+### タスク 1.1 - 商談テーブルの作成
 
-1. Navigate to the Power Apps Maker portal <https://make.powerapps.com>.
+1. Power Apps メーカー テーブルに <https://make.powerapps.com> に移動します。
 
-1. Make sure you are in the **Dev One** environment.
+1. **Dev One** 環境にいることを確認します。
 
-1. In the left navigation pane, select **Tables**.
+1. 左側のナビゲーションウィンドウで、 **Tables** を選択します。
 
-1. Select **+ New table**, and select **Add columns and data**.
+1. **+ New table** を選択し、 **Add columns and data** を選択します。
 
     ![Screenshot of creating a new table in Dataverse.](../media/create-new-table-dataverse.png)
 
-1. Select the **pencil** icon next to New table
+1. 新しいテーブルの横にある **pencil** アイコンを選択します。
 
     ![Screenshot of new table name.](../media/table-name.png)
 
-1. Enter `Opportunity` for **Display name**.
+1. **Display name** に、 `Opportunity` と入力します。
 
-1. Select **Save**.
+1. **Save** を選択します。
 
-### Task 1.2 - Primary column
+### タスク 1.2 - プライマリ列
 
-1. Select the drop-down caret next to **New column** and select **Edit column**.
+1. **New column** の横にあるドロップダウンキャレットを選択し、 **Edit column** を選択します。
 
     ![Screenshot of primary column.](../media/primary-column.png)
 
-1. Enter `Opportunity Subject` for **Display name**.
+1. **Display name** に `Opportunity Subject` と入力します。
 
-1. Select **Update**.
+1. **Update** を選択します。
 
-1. Select **Create**.
+1. **Create** を選択します。
 
-### Task 1.3 - Add columns
+### タスク 1.3 - 列の追加
 
-1. In the **Opportunity columns and data** pane, select **+** to add a new column.
+1. **Opportunity columns and data** ペインで、 **+** を選択し、新しい列を追加します。
 
     ![Screenshot of data pane.](../media/data-pane.png)
 
-1. In the **New column** pane, enter or select the following values:
+1. **New column** ペインで、次の値を入力または選択します:
 
-   1. Display name: `Owner Name`
-   1. Data type: **Single line of text**
-   1. Required: **Business required**
+   1. 表示名: `Owner Name`
+   1. データ型: **Single line of text**
+   1. 必須: **Business required**
 
     ![Screenshot of new column pane.](../media/new-column-pane.png)
 
-1. Select **Save**.
+1. **Save** を選択します。
 
-1. In the **Opportunity columns and data** pane, select **+** to add a new column.
+1. **Opportunity columns and data** ペインで、 **+** を選択して新しい列を追加します。
 
-1. In the **New column** pane, enter or select the following values:
+1. **New column** ペインで、次の値を入力まはた選択します:
 
-   1. Display name: `Customer`
-   1. Data type: **Single line of text**
-   1. Required: **Business required**
+   1. 表示名: `Customer`
+   1. データ型: **Single line of text**
+   1. 必須: **Business required**
 
-1. Select **Save**.
+1. **Save** を選択します。
 
-1. In the **New column** pane, enter or select the following values:
+1. **New column**  ペインで、次の値を入力まはた選択します:
 
-   1. Display name: `Address`
-   1. Data type: **Single line of text**
+   1. 表示名: `Address`
+   1. データ型: **Single line of text**
+   1. 必須: **Optional**
+
+1. **Advanced option** を展開し、 **Maximum character count** に `200` と入力します。
+
+1. **Save** を選択します。
+
+1. **Opportunity columns and data** ペインで、 **+** を選択し、 **New column** ペインで次の値を入力または選択します:
+
+   1. 表示名: `Estimated Close Date`
+   1. データ型: **Date and time**
+   1. フォーマット: **Date only**
+   1. 必須: **Optional**
+
+1. **Save** を選択します。
+
+1. **Opportunity columns and data** ペインで、 **+** を選択し、 **New column** ペインで次の値を入力または選択します:
+
+   1. 表示名: `Amount`
+   1. データ型: **Currency**
    1. Required: **Optional**
 
-1. Expand **Advanced option** and enter `200` for **Maximum character count**.
+1. **Save** を選択します。
 
-1. Select **Save**.
+1. I**Opportunity columns and data** ペインで、 **+** を選択し、 **New column** ペインで次の値を入力または選択します::
 
-1. In the **Opportunity columns and data** pane, select **+** and in the **New column** pane, enter or select the following values:
+   1. 表示名: `Notes`
+   1. データ型: **Multiple lines of text**
+   1. フォーマット: **Text**
+   1. 必須: **Optional**
 
-   1. Display name: `Estimated Close Date`
-   1. Data type: **Date and time**
-   1. Format: **Date only**
-   1. Required: **Optional**
+### タスク 1.4 - 選択列の追加
 
-1. Select **Save**.
+1. **Opportunity columns and data** ペインで、 **+** を選択し、 **New column** ペインで次の値を入力または選択します:::
 
-1. In the **Opportunity columns and data** pane, select **+** and in the **New column** pane, enter or select the following values:
+   1. 表示名: `Status`
+   1. データ型: **Choice**
+   1. 必須: **Optional**
 
-   1. Display name: `Amount`
-   1. Data type: **Currency**
-   1. Required: **Optional**
+1. **Sync with global choice?** で  **No** を選択します。
 
-1. Select **Save**.
+1. **Label** に  `New` と入力し、 **Value** に `1` を入力します。
 
-1. In the **Opportunity columns and data** pane, select **+** and in the **New column** pane, enter or select the following values:
+1. **+ New choice** を選択し、 **Label** に `Open` を入力し、 **Value** に `2` を入力します。
 
-   1. Display name: `Notes`
-   1. Data type: **Multiple lines of text**
-   1. Format: **Text**
-   1. Required: **Optional**
+1. **+ New choice** を選択し、 **Label** に  `Closed` と入力し、 **Value** に `3` を入力します。
 
-### Task 1.4 - Add choice column
-
-1. In the **Opportunity columns and data** pane, select **+** and in the **New column** pane, enter or select the following values:
-
-   1. Display name: `Status`
-   1. Data type: **Choice**
-   1. Required: **Optional**
-
-1. Select **No** for **Sync with global choice?**
-
-1. Enter `New` for **Label** and enter `1` for **Value**.
-
-1. Select **+ New choice** and enter `Open` for **Label** and enter `2` for **Value**.
-
-1. Select **+ New choice** and enter `Closed` for **Label** and enter `3` for **Value**.
-
-1. Select **New** for **Default choice**.
+1. **Default choice** で **New** を選択します。
 
     ![Screenshot of new choice column pane.](../media/new-local-choice.png)
 
-1. Select **Save**.
+1. **Save** を選択します。
 
-## Exercise 2 – Create relationship
+## 演習 2 – 関係を作成する
 
 ### Task 2.1 - Create a lookup column
 
-1. Navigate to the Power Apps Maker portal <https://make.powerapps.com>.
+1. Power Apps メーカー ポータル <https://make.powerapps.com> に移動します。
 
-1. Make sure you are in the **Dev One** environment.
+1. **Dev One** 環境にいることを確認します。
 
-1. In the left navigation pane, select **Tables**.
+1. 左側のナビゲーションウィンドウで、 **Tables** を選択します。
 
-1. Select **Opportunity**.
+1. **Opportunity** を選択します。
 
-1. In the **Opportunity columns and data** pane, select **+** and in the **New column** pane, enter or select the following values:
+1. **Opportunity columns and data** ペインで、 **+** を選択し、 **New column** ペインで次の値を入力または選択します:
 
-   1. Display name: `Account`
-   1. Data type: **Lookup**
-   1. Required: **Optional**
-   1. Related table: **Account**
+   1. 表示名: `Account`
+   1. データ型: **Lookup**
+   1. 必須: **Optional**
+   1. 関連テーブル: **Account**
 
     ![Screenshot of new lookup column pane.](../media/new-lookup.png)
 
-1. Select **Save**.
+1. **Save** を選択します。
 
-## Exercise 3 – Data
+## 演習 3 – データ
 
-### Task 3.1 - Add opportunity records
+### タスク 3.1 - 商談レコードの追加
 
-1. Navigate to the Power Apps Maker portal <https://make.powerapps.com>.
+1. Power Apps メーカー ポータル <https://make.powerapps.com> に移動します。
 
-1. Make sure you are in the **Dev One** environment.
+1. **Dev One** 環境にいることを確認します。
 
-1. In the left navigation pane, select **Tables**.
+1. 左側のナビゲーションウィンドウで、 **Tables** を選択します。
 
-1. Select **Opportunity**.
+1. **Opportunity** を選択します。
 
-1. In the **Opportunity columns and data** pane, select the drop-down caret next to **Edit** and select **Edit in new tab**.
+1. **Opportunity columns and data** ペインで、 **Edit** を選択し、 **Edit in new tab** を選択します。
 
-1. Enter or select the following values:
+1. 次の値を入力または選択します:
 
    1. Opportunity Subject: `100 Widgets`
    1. Owner Name: `MOD Administrator`
@@ -187,7 +187,7 @@ In this lab you will create Dataverse tables and columns.
    1. Status: **Closed**
    1. Amount: `10,000`
 
-1. Select **Inset row below** and enter or select the following values:
+1. **Inset row below** を選択し、次の値を入力または選択します:
 
    1. Opportunity Subject: `Key customer`
    1. Owner Name: `MOD Administrator`
@@ -196,7 +196,7 @@ In this lab you will create Dataverse tables and columns.
    1. Status: **New**
    1. Amount: `50,000`
 
-1. Select **Inset row below** and enter or select the following values:
+1. **Inset row below**  を選択し、次の値を入力または選択します:
 
    1. Opportunity Subject: `New customer`
    1. Owner Name: `MOD Administrator`
@@ -205,7 +205,7 @@ In this lab you will create Dataverse tables and columns.
    1. Status: **New**
    1. Amount: `25,000`
 
-1. Select **Inset row below** and enter or select the following values:
+1. **Inset row below**  を選択し、次の値を入力または選択します:
 
    1. Opportunity Subject: `Repeat customer`
    1. Owner Name: `MOD Administrator`
@@ -216,4 +216,4 @@ In this lab you will create Dataverse tables and columns.
 
     ![Screenshot of edit data pane.](../media/edit-data.png)
 
-1. Close the edit data tab.
+1. データ編集タブを閉じます。
