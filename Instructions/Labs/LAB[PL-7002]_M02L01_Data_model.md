@@ -29,7 +29,7 @@ lab:
 
 ### タスク 1.1 - 商談テーブルの作成
 
-1. Power Apps メーカー テーブルに <https://make.powerapps.com> に移動します。
+1. Power Apps メーカー ポータル <https://make.powerapps.com> に移動します。
 
 1. **Dev One** 環境にいることを確認します。
 
