@@ -1,108 +1,108 @@
 ---
 lab:
-    title: 'Lab 3: SharePoint'
-    module: 'Module 3: Build approval flows with Power Automate'
+    title: 'ラボ 3: SharePoint'
+    module: 'モジュール 3: Power Automate を使用して承認フローを構築する'
 ---
 
-# Practice Lab 3 – SharePoint
+# 実践ラボ 3 – SharePoint
 
-In this lab you will create a SharePoint site and list.
+このラボでは、SharePoint サイトとリストを作成します。
 
-## What you will learn
+## 学習する内容
 
-- How to create a SharePoint list
-- How to upload data
+- SharePoint リストを作成する方法
+- データのアップロード方法
 
-## High-level lab steps
+## ハイレベルラボの手順
 
-- Create a SharePoint list for Opportunities
+- 商談用の SharePoint リストを作成する
   
-## Prerequisites
+## 前提条件
 
-- Must have completed **Lab 0: Validate lab environment**
+- **ラボ 0: ラボ環境を検証する** を完了している必要があります。
 
-## Detailed steps
+## 詳細な手順
 
-## Exercise 1 – Create SharePoint list
+## 演習 1 – SharePoint リストの作成
 
-### Task 1.1 Create a SharePoint site
+### タスク 1.1 SharePoint サイトを作成する
 
-1. In the [Power Apps maker portal](https://make.powerapps.com) select the **App launcher** in the top left of the browser window and then select **OneDrive**.
+1. [Power Apps メーカー ポータル](https://make.powerapps.com) で、ブラウザーウィンドウの左上にある **App launcher** を選択し、 **OneDrive** を選択します。
 
-1. In SharePoint, select **+Create site**.
+1. SharePoint で、 **+Create site** を選択します。
 
-1. Select **Team site**, select **Standard team** template, and select **Use template**.
+1. **Team site** を選択し、 **Standard team** テンプレートを選択し、 **Use template** を選択します。
 
-1. Enter `Power Automate` for **Site name** and select **Next**.
+1. **Site name** に `Power Automate` と入力し、 **Next** を選択します。
 
-1. Select **Create site**.
+1. **Create site** を選択します。
 
-1. Select **Finish**.
+1. **Finish** を選択します。
 
-### Task 1.2 Create a SharePoint list
+### タスク 1.2 SharePoint リストを作成する
 
-1. In the SharePoint site, select **+ New** and then select **List**.
+1. SharePoint サイトで、 **+ New** を選択し、次に **List** を選択します。
 
     ![Screenshot of new SharePoint list.](../media/new-sharepoint-list.png)
 
-1. Select **Blank list**
+1. **Blank list** を選択します。
 
-1. Enter `Tasks` for **Name**  and select **Create**.
+1. **Name** に `Tasks` と入力し、 **Create** を選択します。
 
-1. Select **+ Add column**, select **Multiple lines of text**, and select **Next**.
+1. **+ Add column** を選択し、 **Multiple lines of text** を選択し、 **Next** を選択します。
 
-1. In the **Create a column** pane, enter or select the following values:
+1. **Create a column** ペインで、次の値を入力または選択します:
 
-   1. Name: `Description`
-   1. Data type: **Multiple lines of text**
+   1. 名前: `Description`
+   1. データ型: **Multiple lines of text**
 
-1. Select **Save**.
+1. **Save** を選択します。
 
-1. Select **+Add column**, select **Text**, and select **Next**.
+1. **+Add column** 、 **Text** 、 **Next** を選択します。
 
-1. In the **Create a column** pane, enter or select the following values:
+1. **Create a column** ペインで、次の値を入力または選択します:
 
-   1. Name: `Owner Name`
-   1. Data type: **Single line of text**
+   1. 名前: `Owner Name`
+   1. データ型: **Single line of text**
 
-1. Select **Save**.
+1. **Save** を選択します。
 
-1. Select **+ Add column**, select **Date and time**, and select **Next**.
+1. **+ Add column** を選択し、 **Date and time** を選択し、 **Next** を選択します。
 
-1. In the **Create a column** pane, enter or select the following values:
+1. **Create a column** ペインで、次の値を入力または選択します:
 
-   1. Name: `Deadline`
-   1. Data type: **Date and time**
+   1. 名前: `Deadline`
+   1. データ型: **Date and time**
 
-1. Select **Save**.
+1. **Save** を選択します。
 
-1. Select **+ Add column**, select **Choice**, and select **Next**.
+1. **+ Add column** を選択し、 **Choice** を選択し、 **Next** を選択します。
 
-1. In the **Create a column** pane, enter or select the following values:
+1. **Create a column** ペインで、次の値を入力または選択します:
 
-   1. Name: `Approval Status`
-   1. Data type: **Choice**
-   1. Choice 1=`New`
-   1. Choice 2=`Approved`
-   1. Choice 3=`Declined`
+   1. 名前: `Approval Status`
+   1. データ型: **Choice**
+   1. 選択肢 1=`New`
+   1. 選択肢 2=`Approved`
+   1. 選択肢 3=`Declined`
 
-1. Select **New** for **Default value**
+1. **Default value** で **New** を選択します。
 
     ![Screenshot of new SharePoint list.](../media/add-choice-column.png)
 
-1. Select **Save**.
+1. **Save** を選択します。
 
-1. Copy the first part of the URL of the SharePoint site, for example `https://m365x99999999.sharepoint.com/sites/PowerAutomate/`
+1. SharePoint サイトの URL の最初の部分(例: `https://m365x99999999.sharepoint.com/sites/PowerAutomate/`) をコピーします。
 
-## Exercise 2 – Add data SharePoint list
+## 演習 2 – データ SharePoint リストを追加する
 
-### Task 2.1 - Add data
+### タスク 2.1 - データの追加
 
-1. Navigate to the SharePoint site and select the **Tasks** list.
+1. SharePoint サイトに移動し、 **Tasks** リストを選択します。
 
     ![Screenshot of the SharePoint Tasks list.](../media/tasks-sharepoint-list.png)
 
-1. Select **+ New** and enter the following data and select **Save**:
+1. **+ New** を選択し、次のデータを入力して **Save** を選択します:
 
    1. Title=`Contact Jon`
    1. Description=`Call or email`
@@ -110,7 +110,7 @@ In this lab you will create a SharePoint site and list.
    1. Deadline=**Yesterday**
    1. Approval Status=**Declined**
 
-1. Select **+ New** and enter the following data and select **Save**:
+1. **+ New** を選択し、次のデータを入力して **Save** を選択します:
 
    1. Title=`Create Quote`
    1. Description=`No discount`
@@ -118,7 +118,7 @@ In this lab you will create a SharePoint site and list.
    1. Deadline=**Today**
    1. Approval Status=**Approved**
 
-1. Select **+ New** and enter the following data and select **Save**:
+1. **+ New** を選択し、次のデータを入力して  **Save** を選択します:
 
    1. Title=`Visit Jim`
    1. Description=`First visit`
