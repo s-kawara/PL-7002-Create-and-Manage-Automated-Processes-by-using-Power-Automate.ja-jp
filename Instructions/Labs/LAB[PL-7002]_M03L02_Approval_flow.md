@@ -1,179 +1,179 @@
 ---
 lab:
-    title: 'Lab 4: Approval flow'
-    module: 'Module 3: Build approval flows with Power Automate'
+    title: 'ラボ 4: 承認フロー'
+    module: 'モジュール 3: Power Automate を使用して承認フローを構築する'
 ---
 
-# Practice Lab 4 – Approval flow
+# 演習 4 – 承認フロー
 
-In this lab you will create an approval flow.
+このラボでは、承認フローを作成します。
 
-## What you will learn
+## 学習する内容
 
-- How to create a Power Automate approvals cloud flow
+- Power Automate 承認クラウド フローを作成する方法
 
-## High-level lab steps
+## ハイレベルラボの手順
 
-- Create an automated cloud flow for the SharePoint list
-- Create an approval
-- Add condition for approval outcome
-- Test the flow
+- SharePoint リストの自動クラウド フローを作成する
+- 承認を作成する
+- 承認結果の条件を追加する
+- フローをテストする
   
-## Prerequisites
+## 前提条件
 
-- Must have completed **Lab 3: SharePoint**
+- **ラボ 3: SharePoint** を完了している必要があります
 
-## Detailed steps
+## 詳細な手順
 
-## Exercise 1 – Create approval flow
+## 演習 1 – 承認フローを作成する
 
-### Task 1.1 - Create the trigger
+### タスク 1.1 - トリガーの作成
 
-1. Navigate to the Power Automate portal <https://make.powerautomate.com>.
+1. Power Automate ポータル <https://make.powerautomate.com> に移動します。
 
-1. Make sure you are in the **Dev One** environment.
+1. **Dev One** 環境にいることを確認します。
 
-1. Select the **+ Create** tab from the left-side menu.
+1. 左型のメニューから **+ Create** タブを選択します。
 
-1. Select **Automated cloud flow**.
+1. **Automated cloud flow** を選択します。
 
-1. Enter `Task approval` for **Flow name**.
+1. **Flow name** に `Task approval` と入力します。
 
-1. Enter `SharePoint` in search.
+1. 検索に `SharePoint` と入力します。
 
-1. Select **When an item is created**.
+1. **When an item is created** を選択します。
 
-1. Select **Create**.
+1. **Create** を選択します。
 
-### Task 1.2 - Configure the trigger
+### タスク 1.2 - トリガーを構成する
 
-1. Select the **When an item is created** step.
+1. **When an item is created** ステップを選択します。
 
-1. Select **When an item is created** and enter `New task`.
+1. **When an item is created** を選択し、 `New task` と入力します。
 
-1. Select the **Power Automate SharePoint site**.
+1. **Power Automate SharePoint site** を選択します。
 
-1. Select the **Tasks** list.
+1. **Tasks** リストを選択します。
 
     ![Screenshot of SharePoint trigger.](../media/sharepoint-trigger.png)
 
-### Task 1.3 - Add approval action
+### タスク 1.3 - 承認アクションの追加
 
-1. Select the **+** icon under the trigger step and select **Add an action**.
+1. トリガーステップの下にある **+** アイコンを選択し、 **Add an action** を選択します。
 
-1. Enter `approval` in search.
+1. 検索に `approval` と入力します。
 
     ![Screenshot of approvals search.](../media/search-approval.png)
 
-1. Select **Start and wait for an approval** under **Approvals**.
+1. **Approvals** で **Start and wait for an approval** を選択します。
 
-1. Select **Create New**.
+1. **Create New** を選択します。
 
-1. Select **Approve/Reject - First to respond** for **Approval Type**
+1. **Approval Type** で **Approve/Reject - First to respond** を選択します。 
 
-1. Select **Start and wait for an approval*** and enter `Approval`.
+1. **Start and wait for an approval** を選択し、 `Approval` と入力します。
 
-1. Select **Title** field and select the Dynamic content icon.
+1. **Title** フィールドを選択し、動的コンテンツアイコンを選択します。
 
     ![Screenshot of dynamic content for SharePoint item.](../media/sharepoint-dynamic-content.png)
 
-1. Select **Title**.
+1. **Title** を選択します。
 
-1. Enter your tenant user id for **Assigned To**.
+1. **Assigned To** にテナントのユーザー ID を入力します。
 
-1. Select **Details** field and select the Dynamic content icon.
+1. **Details** フィールドを選択し、動的コンテンツアイコンを選択します。
 
-1. Select **Description**.
+1. **Description** を選択します。
 
-1. Select **Item Link** field and select the Dynamic content icon and select **See More**.
+1. **Item Link** フィールドを選択し、動的コンテンツアイコンを選択し、 **See More** を選択します。
 
-1. Select **Link to item**.
+1. **Link to item** を選択します。
 
-### Task 1.4 - Add condition
+### タスク 1.4 - 条件の追加
 
-1. Select the **+** icon under the approval step and select **Add an action**.
+1. 承認ステップの下にある **+** アイコンを選択し、 **Add an action** を選択します。
 
-1. Enter `condition` in search.
+1. 検索に `condition` を入力します。
 
-1. Select **Condition** under **Control**.
+1. **Control** で **Condition** を選択します。
 
-1. Select **Save**.
+1. **Save** を選択します。
 
-1. Select the **<-** Back button from the top left of the command bar.
+1. コマンドバーの左下にある **<-** 戻るボタンを選択します。
 
-1. Select the left-hand **Choose a value** field and select the Dynamic content icon.
+1. 左側の **Choose a value** フィールドを選択し、動的コンテンツアイコンを選択します。
 
     ![Screenshot of dynamic content for a condition.](../media/add-condition.png)
 
-1. Select **Outcome**.
+1. **Outcome** を選択します。
 
-1. Select **is equal to** for **Operator**.
+1. **Operator** に **is equal to** を選択します。
 
-1. Select the right-hand **Choose a value** field and enter `Approve`.
+1. 右側の **Choose a value** フィールドを選択し、 `Approve` と入力します。
 
     ![Screenshot of the condition.](../media/condition.png)
 
-### Task 1.5 - Update status actions
+### タスク 1.5 - ステータスの更新アクション
 
-1. Select the **+** icon under **True** and select **Add an action**.
+1. **True** の下の **+** アイコンを選択し、 **Add an action** を選択します。
 
-1. Enter `update item` in search.
+1. 検索に `update item` と入力します。
 
-1. Select **Update Item** under **SharePoint**.
+1. **SharePoint** の下の **Update Item** を選択します。
 
-1. Select **Update item** and enter `Set task to approved`.
+1. **Update item** を選択し、 `Set task to approved` と入力します。
 
-1. Select the **Power Automate SharePoint site**.
+1. **Power Automate SharePoint site** を選択します。
 
-1. Select the **Tasks** list.
+1. **Tasks** リストを選択します。
 
-1. Select **Id** field and select the Dynamic content icon.
+1. **Id** フィールドを選択し、動的コンテンツを選択します。
 
-1. Select **Id** from **New task**.
+1. **New task** から **Id** を選択します。
 
-1. Select **Show all**.
+1. **Show all** を選択します。
 
-1. Select **Title** field and select the Dynamic content icon.
+1. **Title** フィールドを選択し、動的コンテンツアイコンを選択します。
 
-1. Select **Title** from **New task**.
+1. **New task** から **Title** を選択します。
 
-1. Select **Approved** for **Approval Status Value**.
+1. **Approval Status Value** で **Approved** を選択します。
 
-1. Select the **+** icon under **False** and select **Add an action**.
+1. **False** の下の **+** アイコンを選択し、 **Add an action** を選択します。
 
-1. Enter `update item` in search.
+1. 検索に `update item` と入力します。
 
-1. Select **Update Item** under **SharePoint**.
+1. **SharePoint** の下の **Update Item** を選択します。
 
-1. Select **Update item 1** and enter `Set task to declined`.
+1. **Update item 1** を選択し、 `Set task to declined` と入力します。
 
-1. Select the **Power Automate SharePoint site**.
+1. **Power Automate SharePoint site** を選択します。
 
-1. Select the **Tasks** list.
+1. **Tasks** リストを選択します。
 
-1. Select **Id** field and select the Dynamic content icon.
+1. **Id** フィールドを選択し、動的コンテンツアイコンを選択します。
 
-1. Select **Id** from **New task**.
+1. **New task** から **Id** を選択します。
 
-1. Select **Show all**.
+1. **Show all** を選択します。
 
-1. Select **Title** field and select the Dynamic content icon.
+1. **Title** フィールドを選択し、動的コンテンツアイコンを選択します。
 
-1. Select **Title** from **New task**.
+1. **New task** から **Title** を選択します。
 
-1. Select **Decline** for **Approval Status Value**.
+1. **Approval Status Value** で **Decline** を選択します。
 
-1. Select **Save**.
+1. **Save** を選択します。
 
-1. Select the **<-** Back button from the top left of the command bar.
+1. コマンドバーの左上にある **<-** 戻るボタンを選択します。
 
-## Exercise 2 – Test approval
+## 演習 2 – テストの承認
 
-### Task 2.1 - Trigger approval flow
+### タスク 2.1 - 承認フローのトリガー
 
-1. Navigate to the SharePoint site and select the **Tasks** list.
+1. SharePoint サイトに移動し、 **Tasks** リストを選択します。
 
-1. Select **+ New** and enter the following data and select **Save**:
+1. **+ New** を選択し、次のデータを入力し、 **Save**を選択します:
 
    1. Title=`Approval test`
    1. Description=`Test`
@@ -181,34 +181,34 @@ In this lab you will create an approval flow.
    1. Deadline=**Today**
    1. Approval Status=**New**
 
-### Task 2.2 - Progress approval
+### タスク 2.2 - 進行状況の承認
 
-1. Navigate to the Power Automate portal <https://make.powerautomate.com>.
+1. Power Automate ポータル <https://make.powerautomate.com> に移動します。
 
-1. Make sure you are in the **Dev One** environment.
+1. **Dev One** 環境にいることを確認します。
 
-1. Select the **My flows** tab from the left-side menu.
+1. 左側のメニューから **My flows** タブを選択します。
 
-1. Select **Task approval**.
+1. **Task approval** を選択します。
 
-1. Select the date and time in the flow run history.
+1. フロー実行履歴の日付と時刻を選択します。
 
     > ** Note: The Approvals functionality will be install in the background. This will take approximately 10 minutes.
 
-1. Select the **Approvals** tab from the left-side menu.
+1. 左側のメニューから **Approvals** タブを選択します。
 
     ![Screenshot of approvals in the portal.](../media/approvals.png)
 
-1. Select the **Approval test**, select the **Tick**, and select **Confirm**.
+1. **Approval test** を選択し、 **Tick** を選択し、 **Confirm** を確認します。
 
-1. Select **Done**.
+1. **Done** を選択します。
 
-1. Select the **My flows** tab from the left-side menu.
+1. 左側のメニューから **My flows** タブを選択します。
 
-1. Select **Task approval**.
+1. **Task approval** を選択します。
 
-1. Select the date and time in the flow run history.
+1. フロー実行履歴の日付と時刻を選択します。
 
-1. Navigate to the SharePoint site and select the **Tasks** list.
+1. SharePoint サイトに移動し、 **Tasks** リストを選択します。
 
-1. Verify that the **Approval status** of the **Approval test** item is **Approved**.
+1. **Approval test** の **Approval status** が **Approved** であることを確認します。
