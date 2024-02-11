@@ -1,154 +1,154 @@
 ---
 lab:
-    title: 'Lab 5: Button flow'
-    module: 'Module 4: Build flows to manage user information'
+    title: 'ラボ 5: ボタン フロー'
+    module: 'モジュール 4: ユーザー情報を管理するためのフローを構築する'
 ---
 
-# Practice Lab 5 – Button flow
+# 演習 5 – ボタン フロー
 
-In this lab you will create a button flow.
+このラボでは、ボタン フローを作成します。
 
-## What you will learn
+## 学習する内容
 
-- How to create a Power Automate instant button flow
+- Power Automate インスタント ボタン フローを作成する方法
 
-## High-level lab steps
+## ハイレベルラボの手順
 
-- Create a button flow
-- Use trigger tokens
-- Add user input
-- Test the flow
+- ボタンフローを作成する
+- トリガートークンを使用する
+- ユーザー入力を追加する
+- フローをテストする
   
-## Prerequisites
+## 前提条件
 
-- Must have completed **Lab 2: Data model**
+- **ラボ 2: データ モデル** を完了している必要があります
 
-## Detailed steps
+## 詳細な手順
 
-## Exercise 1 – Create button flow
+## 演習 1 – ボタン フローの作成
 
-### Task 1.1 - Create the trigger
+### タスク 1.1 - トリガーの作成
 
-1. Navigate to the Power Automate portal <https://make.powerautomate.com>.
+1. Power Automate ポータル <https://make.powerautomate.com> に移動します。
 
-1. Make sure you are in the **Dev One** environment.
+1. **Dev One** 環境にいることを確認します。
 
-1. Select the **+ Create** tab from the left-side menu.
+1. 左側のメニューから **+ Create** タブを選択します。
 
-1. Select **Instant cloud flow**.
+1. **Instant cloud flow** を選択します。
 
-1. Enter `Create opportunity` for **Flow name**.
+1. **Flow name** に `Create opportunity` と入力します。 
 
-1. Select **Manually trigger a flow**.
+1. **Manually trigger a flow** を選択します。
 
-1. Select **Create**.
+1. **Create** を選択します。
 
-### Task 1.2 - Add user input
+### タスク 1.2 - ユーザー入力の追加
 
-1. Select the **Manually trigger a flow** step.
+1. **Manually trigger a flow** ステップを選択します。
 
-1. Select **Manually trigger a flow** and enter `Button clicked`.
+1. **Manually trigger a flow** を選択し、 `Button clicked` と入力します。
 
-1. Select **Add an input**.
+1. **Add an input** を選択します。
 
-1. Select **Text**
+1. **Text** を選択します。
 
-1. Enter `Customer Name` in **Input**.
+1. **Input** に `Customer Name` を入力します。
 
-1. Enter `Please enter the customer name` in **Please enter your input**.
+1. **Please enter your input** に `Please enter the customer name` と入力します。
 
-1. Select **Add an input**.
+1. **Add an input** を選択します。
 
-1. Select **Text**
+1. **Text** を選択します。
 
-1. Enter `Comments` in **Input**.
+1. **Input** に `Comments` を入力します。
 
-1. Enter `Any comments` in **Please enter your input**.
+1. **Please enter your input** に `Any comments` と入力します。
 
-1. Select **Add an input**.
+1. **Add an input** を選択します。
 
-1. Select **Number**
+1. **Number** を選択します。
 
-1. Enter `Potential Sale` in **Input**.
+1. **Input** に `Potential Sale` と入力します。
 
     ![Screenshot of user input.](../media/user-input.png)
 
-### Task 1.3 - Add create opportunity action
+### タスク 1.3 - 商談作成アクションの追加
 
-1. Select the **+** icon under the trigger step and select **Add an action**.
+1. トリガーステップの下にある **+** アイコンを選択し、 **Add an action** を選択します。
 
-1. Enter `add row` in search.
+1. 検索に `add row` と入力します。
 
-1. Select **Add a new row** under **Dataverse**.
+1. **Dataverse** の下の **Add a new row** を選択します。
 
-1. Select **Sign In**
+1. **Sign In** を選択します。
 
-1. Use your tenant credentials.
+1. テナントの認証情報を使用します。
 
-1. Select **Add a new row** and enter `New opportunity`.
+1. **Add a new row** を選択し、 `New opportunity` と入力します。
 
-1. Select **Opportunities** for **Table Name**
+1. **Table Name** として **Opportunities** を選択します。
 
-1. Select **Customer** field and select the Dynamic content icon.
+1. **Customer** フィールドを選択し、動的コンテンツアイコンを選択します。
 
-1. Select **Customer Name**.
+1. **Customer Name** を選択します。
 
-1. Select **Opportunity Subject** field and enter `New opportunity`.
+1. **Opportunity Subject** フィールドを選択し、 `New opportunity` と入力します。
 
-1. Select **Owner Name** field and enter `MOD Administrator`.
+1. **Owner Name** フィールドを選択し、 `MOD Administrator` と入力します。
 
-1. Select **Show all**.
+1. **Show all** を選択します。
 
-1. Select **Address** field and select the Dynamic content icon.
+1. **Address** フィールドを選択し、動的コンテンツアイコンを選択します。
 
-1. Select **Full address**.
+1. **Full address** を選択します。
 
-1. Select **Amount** field and select the Dynamic content icon.
+1. **Amount** フィールドを選択し、動的コンテンツアイコンを選択します。
 
-1. Select **Potential Sale**.
+1. **Potential Sale** を選択します。
 
-1. Select **Notes** field and select the Dynamic content icon.
+1. **Notes** フィールドを選択し、動的コンテンツアイコンを選択します。
 
-1. Select **Comments**.
+1. **Comments** を選択します。
 
-1. Select **Estimated Close Date** field and select the expression icon.
+1. **Estimated Close Date** フィールドを選択し、式アイコンを選択します。
 
-1. Enter the expression `addDays(utcNow(),30)` and select **Add**.
+1. 式 `addDays(utcNow(),30)` を入力kし、 **Add** を選択します。
 
     ![Screenshot of new opportunity action.](../media/new-opportunity-action.png)
 
-1. Select **Save**.
+1. **Save** を選択します。
 
-## Exercise 2 – Test button flow
+## 演習 2 – ボタン フローをテストする
 
-### Task 2.1 - Run button flow
+### タスク 2.1 - 実行ボタンのフロー
 
-1. Select **Test**
+1. **Test** を選択します。
 
-1. Select **Manually**.
+1. **Manually** を選択します。
 
-1. Select **Test**.
+1. **Test** を選択します。
 
     ![Screenshot of testing button flow.](../media/user-input-test.png)
 
-1. Enter the following details:
+1. 次の詳細を入力します:
 
    1. Customer Name=`Button test`
    1. Comments=`This is a test`
    1. Potential Sale=`9999`
 
-1. Select **Run flow**.
+1. **Run flow** を選択します。
 
-1. Select **Done**.
+1. **Done** を選択します。
 
-1. Select the **<-** Back button from the top left of the command bar.
+1. コマンドバーの左上にある **<-** 戻るボタンを選択します。
 
-### Task 2.2 - Verify opportunity record created
+### タスク 2.2 - 作成された商談レコードの確認
 
-1. Navigate to the Power Apps Maker portal <https://make.powerapps.com>.
+1. Power Autoamte メーカーポータル <https://make.powerapps.com> に移動します。
 
-1. Make sure you are in the **Dev One** environment.
+1. **Dev One** 環境にいることを確認します。
 
-1. In the left navigation pane, select **Tables**.
+1. 左側のナビゲーションウィンドウで、 **Tables** を選択します。
 
-1. Select **Opportunity**.
+1. **Opportunity** を選択します。
