@@ -1,162 +1,162 @@
 ---
 lab:
-    title: 'Lab 6: Scheduled flow'
-    module: 'Module 5: Power Automate's deep integration across multiple data sources'
+    title: 'ラボ 6: スケジュールされたフロー'
+    module: 'モジュール 5: 複数のデータ ソースにわたる Power Automate の緊密な統合'
 ---
 
-# Practice Lab 6 – Scheduled flow
+# 実践ラボ 6 – スケジュールされたフロー
 
-In this lab you will create a scheduled flow.
+このラボでは、スケジュールされたフローを作成します。
 
-## What you will learn
+## 学習する内容
 
-- How to create a Power Automate scheduled flow and process a list of SharePoint items.
+- Power Automate のスケジュールされたフローを作成し、SharePoint アイテムのリストを処理する方法。
 
-## High-level lab steps
+## ハイレベルラボの手順
 
-- Create a scheduled flow
-- Query SharePoint list
-- Use data operations
-- Test the flow
+- スケジュールされたフローを作成する
+- SharePoint リストのクエリ
+- データ操作を使用する
+- フローをテストする
   
-## Prerequisites
+## 前提条件
 
-- Must have completed **Lab 3: SharePoint**
+- **ラボ 3: SharePoint**  を完了している必要があります
 
-## Detailed steps
+## 詳細な手順
 
-## Exercise 1 – Create scheduled flow
+## 演習 1 – スケジュールされたフローを作成する
 
-### Task 1.1 - Create the trigger
+### タスク 1.1 - トリガーの作成
 
-1. Navigate to the Power Automate portal <https://make.powerautomate.com>.
+1. Power Automate ポータル <https://make.powerautomate.com> に移動します。
 
-1. Make sure you are in the **Dev One** environment.
+1. **Dev One** 環境にいることを確認します。
 
-1. Select the **+ Create** tab from the left-side menu.
+1. 左側のメニューから **+ Create** タブを選択します。
 
-1. Select **Scheduled cloud flow**.
+1. **Scheduled cloud flow** を選択します。
 
-1. Enter `Daily New Tasks` for **Flow name**.
+1. **Flow name** に `Daily New Tasks` と入力します。 
 
-1. Select **Day**.
+1. **Day** を選択します。
 
     ![Screenshot of build a scheduled flow.](../media/build-scheduled-flow.png)
 
-1. Select **Create**.
+1. **Create** を選択します。
 
-### Task 1.2 - Configure the trigger
+### タスク 1.2 - トリガーを構成する
 
-1. Select the **Recurrence** step.
+1. **Recurrence** ステップを選択します。
 
-1. Select **Manually trigger a flow** and enter `Daily`.
+1. **Manually trigger a flow** を選択し、 `Daily` と入力します。
 
-### Task 1.3 - Query new tasks
+### タスク 1.3 - 新しいタスクのクエリ
 
-1. Select the **+** icon under the trigger step and select **Add an action**.
+1. トリガーステップの下にある **+** アイコンを選択し、 **Add an action** を選択します。
 
-1. Enter `list items` in search.
+1. 検索に `list items` と入力します。
 
-1. Select **Get items** under **SharePoint**.
+1. **SharePoint** で **Get items** を選択します。
 
-1. Select **Get items** and enter `New tasks`.
+1. **Get items** を選択し、 `New tasks` を入力します。
 
-1. Select the **Power Automate SharePoint site**.
+1. **Power Automate SharePoint site** を選択します。
 
-1. Select the **Tasks** list.
+1. **Tasks** リストを選択します。
 
-1. Select **Show all**.
+1. **Show all** を選択します。
 
-1. Select the **Filter Query** field and enter `ApprovalStatus eq 'New'`
+1. **Filter Query** フィールドを選択し、 `ApprovalStatus eq 'New'` と入力します。
 
     ![Screenshot of list items query.](../media/list-items.png)
 
-### Task 1.4 - Select columns
+### タスク 1.4 - 列の選択
 
-1. Select the **+** icon under the New Tasks step and select **Add an action**.
+1. 新しいタスクステップの下にある **+** アイコンを選択し、 **Add an action** を選択します。
 
-1. Enter `Select` in search.
+1. 検索に `Select` と入力します。
 
-1. Select **Built-in** for **Runtime**.
+1. **Runtime** に **Built-in** を選択します。
 
-1. Select **Select** under **Data Operations**.
+1. **Data Operations** で **Select** を選択します。
 
-1. Select **From** field and select the Dynamic content icon.
+1. **From** フィールドを選択し、動的コンテンツアイコンを選択します。
 
-1. Select **Body/value** from **New tasks**.
+1. **New tasks** から **Body/value** を選択します。
 
-1. Select **Enter key** field and enter `Task`.
+1. **Enter key** フィールドを選択し、 `Task` を入力します。
 
-1. Select **Enter value** field, select the Dynamic content icon.
+1. **Enter value** フィールドを選択し、動的コンテンツアイコンを選択します。
 
-1. Select **Title** from **New tasks**.
+1. **New tasks** から **Title** を選択します。
 
-1. Select **Enter key** field and enter `Description`.
+1. **Enter key** フィールドを選択し、 `Description` を入力します。
 
-1. Select **Enter value** field, select the Dynamic content icon.
+1. **Enter value** フィールドを選択し、動的コンテンツアイコンを選択します。
 
-1. Select **Description** from **New tasks**.
+1. **New tasks** から **Description** を選択します。
 
-1. Select **Enter key** field and enter `Due`.
+1. **Enter key** フィールドを選択し、 `Due` と入力します。
 
-1. Select **Enter value** field, select the Dynamic content icon.
+1. **Enter value** フィールドを選択し、動的コンテンツアイコンを選択します。
 
-1. Select **Deadline** from **New tasks**.
+1. **New tasks** から **Deadline** を選択します。
 
     ![Screenshot of Select action.](../media/select-action.png)
 
-### Task 1.5 - Create table
+### タスク 1.5 - テーブルの作成
 
-1. Select the **+** icon under the Select step and select **Add an action**.
+1. 選択ステップの下にある **+** アイコンを選択し、 **Add an action** を選択します。
 
-1. Enter `create html` in search.
+1. 検索に `create html` と入力します。
 
-1. Select **Create HTML table** under **Data Operations**.
+1. **Data Operations** で **Create HTML table** を選択します。
 
-1. Select **Create HTML table** and enter `Format as HTML table`.
+1. **Create HTML table** を選択し、`Format as HTML table` と入力します。
 
-1. Select **From** field and select the Dynamic content icon.
+1. **From** フィールドを選択し、動的コンテンツアイコンを選択します。
 
-1. Select **Output** from **Select**.
+1. **Select** から **Output** を選択します。
 
     ![Screenshot of Format HTML table action.](../media/format-html-action.png)
 
-### Task 1.6 - Send email
+### タスク 1.6 - 電子メールを送信する
 
-1. Select the **+** icon under the Create HTML table step and select **Add an action**.
+1. HTML テーブルの作成ステップの下にある **+** アイコンを選択し、 **Add an action** を選択します。
 
-1. Enter `email` in search.
+1. 検索に `email` と入力します。
 
-1. Select **Send an email (V2)** under **Office 365 Outlook**.
+1. **Office 365 Outlook** で **Send an email (V2)** を選択します。
 
-1. Select **Send an email (V2)** and enter `Notify by email`.
+1. **Send an email (V2)** を選択し、 `Notify by email` と入力します。
 
-1. Select **To** field and select **Enter custom value**.
+1. **To** フィールドを選択し、 **Enter custom value** を選択します。
 
-1. Enter your tenant user id for **To**.
+1. **To** にてなんとのユーザー ID を入力します。
 
-1. Select **Subject** field and enter `Daily Tasks`.
+1. **Subject** フィールドを選択し、 `Daily Tasks` と入力します。
 
-1. Select **Body** field and select the Dynamic content icon.
+1. **Body** フィールドを選択し、動的コンテンツアイコンを選択します。
 
-1. Select **Output** from **Format as HTML table**.
+1. **Format as HTML table** から **Output** を選択します。
 
-1. Select **Save**.
+1. **Save** を選択します。
 
-## Exercise 2 – Test scheduled flow
+## 演習 2 – スケジュールされたフローをテストする
 
-### Task 2.1 - Run scheduled flow manually
+### タスク 2.1 - スケジュールされたフローを手動で実行する
 
-1. Select **Test**
+1. **Test** を選択します。
 
-1. Select **Manually**.
+1. **Manually** を選択します。
 
-1. Select **Test**.
+1. **Test** を選択します。
 
-1. Select **Run flow**.
+1. **Run flow** を選択します。
 
-1. Select **Done**.
+1. **Done** を選択します。
 
-1. In the Power Automate portal, select the **App launcher** in the top left of the browser window and then select **Outlook**.
+1. Power Automate ポータルで、ブラウザーウィd脳の左上にある **App launcher** を選択し、 **Outlook** を選択します。
 
     ![Screenshot of Format HTML table action.](../media/daily-tasks-email.png)
