@@ -1,133 +1,133 @@
 ---
 lab:
-    title: 'Lab 7: Trigger filters'
-    module: 'Module 5: Power Automate's deep integration across multiple data sources'
+    title: 'ラボ 7: トリガー フィルター'
+    module: 'モジュール 5: 複数のデータ ソースにわたる Power Automate の緊密な統合'
 ---
 
-# Practice Lab 7 – Trigger filters
+# 演習 7 – トリガーフィルター
 
-In this lab you will filter on an update trigger.
+このラボでは、更新トリガーでフィルターをかけます。
 
-## What you will learn
+## 学習する内容
 
-- How to filter triggers
+- トリガーをフィルタリングする方法
 
-## High-level lab steps
+## ハイレベルラボの手順
 
-- Create an automated flow
-- Add column filter
-- Add query filter
+- 自動化されたフローを作成する
+- 列フィルタを追加する
+- クエリフィルターを追加
 
-## Prerequisites
+## 前提条件
 
-- Must have completed **Lab 2: Data model**
+- **ラボ 2: データ モデル** を完了している必要があります
 
-## Detailed steps
+## 詳細な手順
 
-## Exercise 1 - Schema name
+## 演習 1 - スキーマ名
 
-### Task 1.1 - Column schema name
+### タスク 1.1 - 列スキーマ名
 
-1. Navigate to the Power Apps Maker portal <https://make.powerapps.com>.
+1. Power Apps メーカー ポータル <https://make.powerapps.com> に移動します。
 
-1. Make sure you are in the **Dev One** environment.
+1. **Dev One** 環境にいることを確認します。
 
-1. In the left navigation pane, select **Tables**.
+1. 左側のナビゲーションウィンドウで、 **Tables** を選択します。
 
-1. Select **Opportunity**
+1. **Opportunity** を選択します。
 
-1. Under **Schema**, select **Columns**.
+1. **Schema** で **Columns** を選択します。
 
-1. Select the **Status** column.
+1. **Status** 列を選択します。
 
-1. Expand **Advanced options**.
+1. **Advanced options** を展開します。
 
     ![Screenshot of column schema name.](../media/column-schema-name.png)
 
-1. Copy the **logical name** for use in the flow.
+1. フローで使用するために **logical name** をコピーします。
 
    > ** Note: The prefix for your status column will be different.
 
-## Exercise 2 – Create automated flow
+## 演習 2 – 自動フローの作成
 
-### Task 2.1 - Create the trigger
+### タスク 2.1 - トリガーの作成
 
-1. Navigate to the Power Automate portal <https://make.powerautomate.com>.
+1. Power Automate ポータル <https://make.powerautomate.com> に移動します。
 
-1. Make sure you are in the **Dev One** environment.
+1. **Dev One** 環境にいることを確認します。
 
-1. Select the **+ Create** tab from the left-side menu.
+1. 左側のメニューから **+ Create** タブを選択します。
 
-1. Select **Automated cloud flow**.
+1. **Automated cloud flow** を選択します。
 
-1. Enter `Opportunity Closed` for **Flow name**.
+1. **Flow name** 名に `Opportunity Closed` と入力します。
 
-1. Enter `Dataverse` in search.
+1. 検索に `Dataverse` と入力します。
 
-1. Select **When a row is added, modified, or deleted**.
+1. **When a row is added, modified, or deleted** を選択します。
 
-1. Select **Create**.
+1. **Create** を選択します。
 
-### Task 2.2 - Configure the trigger
+### タスク 2.2 - トリガーを構成する
 
-1. Select the **When a row is added, modified, or deleted** step.
+1. **When a row is added, modified, or deleted** ステップを選択します。
 
-1. Select **When a row is added, modified, or deleted** and enter `Opportunity changed`.
+1. **When a row is added, modified, or deleted** を選択し、 `Opportunity changed` と入力します。
 
-1. Select **Modified** for **Change Type**.
+1. **Change Type** で **Modified** を選択します。
 
-1. Select **Opportunities** for **Table Name**
+1. **Table Name** として **Opportunities** を選択します。
 
-1. Select **Organization** for **Scope**
+1. **Scope** として **Organization** を選択します。
 
     ![Screenshot of update row trigger.](../media/update-trigger.png)
 
-### Task 2.3 - Send email
+### タスク 2.3 - 電子メールを送信する
 
-1. Select the **+** icon under the trigger step and select **Add an action**.
+1. トリガーステップの下にある **+** アイコンを選択し、 **Add an action** を選択します。
 
-1. Enter `email` in search.
+1. 検索に `email` と入力します。
 
-1. Select **Send an email (V2)** under **Office 365 Outlook**.
+1. **Office 365 Outlook** で **Send an email (V2)** を選択します。
 
-1. Select **Send an email (V2)** and enter `Notify by email`.
+1. **Send an email (V2)** を選択し、 `Notify by email` と入力します。
 
-1. Select **To** field and select **Enter custom value**.
+1. **To** フィールドを選択し、 **Enter custom value** を選択します。
 
-1. Enter your tenant user id for **To**.
+1. **To** にテナントのユーザー ID を入力します。
 
-1. Select **Subject** field and enter `Opportunity closed`.
+1. **Subject** フィールドを選択し、 `Opportunity closed` と入力します。
 
-1. Select **Body** field and select the Dynamic content icon.
+1. **Body** フィールドを選択し、動的コンテンツアイコンを選択します。
 
-1. Select **Opportunity Subject** from **Opportunity changed**.
+1. **Opportunity changed** から **Opportunity Subject** を選択します。
 
-1. Select **Body** field and select the Dynamic content icon.
+1. **Body** フィールドを選択し、動的コンテンツアイコンを選択します。
 
-1. Select **Status** from **Opportunity changed**.
+1. **Opportunity changed** から **Status** を選択します。
 
-### Task 2.4 - Column filter
+### タスク 2.4 - 列フィルター
 
-1. Select the **Opportunity changed** step.
+1. **Opportunity changed** ステップを選択します。
 
-1. Select **Show all**
+1. **Show all** を選択します。
 
-1. Select the **Select Columns** field and enter `cr977_status`
+1. **Select Columns** フィールドを選択し、 `cr977_status` と入力します。
 
    > ** Note: The prefix for your status column will be different.
 
-### Task 2.5 - Row filter
+### タスク 2.5 - 行フィルター
 
-1. Select the **Opportunity changed** step.
+1. **Opportunity changed** ステップを選択します。
 
-1. Select **Show all**
+1. **Show all** を選択します。
 
-1. Select the **Filter Rows** field and enter `cr977_status eq 3`
+1. **Filter Rows** フィールドを選択し、 `cr977_status eq 3` と入力します。
 
     ![Screenshot of trigger filter.](../media/trigger-filter.png)
 
-    > ** Note: The prefix for your status column will be different.
+    > ** 注: ステータス列の接頭辞は異なります。
 
-1. Select **Save**.
+1. **Save** を選択します。
 
-1. Select the **<-** Back button from the top left of the command bar.
+1. コマンドバーの左上にある **<-** 戻るボタンを選択します。
