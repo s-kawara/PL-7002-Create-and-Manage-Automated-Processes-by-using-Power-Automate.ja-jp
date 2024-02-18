@@ -4,7 +4,7 @@ lab:
     module: 'モジュール 3: Power Automate を使用して承認フローを構築する'
 ---
 
-# 実践ラボ 3 – SharePoint
+# 実践 3 – SharePoint
 
 このラボでは、SharePoint サイトとリストを作成します。
 
